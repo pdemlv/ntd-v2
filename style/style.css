@@ -1330,7 +1330,7 @@ header .menuOpen {
 
 .location {
   position: relative;
-  height: 700px;
+  margin-bottom: 50px;
   padding: 0; }
   @media (max-width: 1725px) {
     .location {
