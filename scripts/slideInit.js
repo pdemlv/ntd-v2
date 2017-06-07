@@ -14,7 +14,7 @@ jQuery(document).ready(function($) {
     $SlideDuration: 500,
     $MinDragOffsetToSlide: 20,
     $SlideWidth: 1200,
-    $SlideHeight: 800,
+    $SlideHeight: 900,
     $SlideSpacing: 0,
     $DisplayPieces: 1,
     $ParkingPosition: 0,

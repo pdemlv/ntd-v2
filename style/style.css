@@ -284,13 +284,12 @@ header .menu a.btn {
   display: block;
   position: absolute;
   right: 50%;
-  margin-right: -80px;
+  margin-right: -115px;
   bottom: 0; }
 
 .minMenu .logoCenter {
-  max-width: 100px;
-  margin-right: -60px;
-  bottom: -10px; }
+  max-width: 120px;
+  margin-right: -60px; }
 
 .bgSection {
   background: url("../img/fon1.jpg") no-repeat;
@@ -301,10 +300,14 @@ header .menu a.btn {
   position: relative; }
   .bgSection__priceMeter {
     position: absolute;
-    right: 33%; }
+    right: 33%;
+    top: 92px; }
   .bgSection__btnMain {
     margin-top: 90px;
     background-color: #ff4f1e; }
+  .bgSection__headlineContainer {
+    top: -webkit-calc(50% - 113px) !important;
+    top: calc(50% - 113px) !important; }
 
 .phone-container {
   display: inline-block;
@@ -583,7 +586,7 @@ header .menu a.btn {
     line-height: 27px; }
   .quality__infoSection {
     width: 50%;
-    padding: 80px 20px 0px 40px;
+    padding: 80px 20px 40px 40px;
     max-height: 950px;
     position: relative;
     background-color: #eaeaea; }
@@ -600,37 +603,76 @@ header .menu a.btn {
       height: 70px; }
     @media (max-width: 700px) {
       .quality__infoSection {
-        width: 100%; } }
-    @media (max-width: 700px) {
-      .quality__infoSection {
+        width: 100%;
         padding: 40px 10px 0px 40px; } }
+    @media (max-width: 400px) {
+      .quality__infoSection {
+        padding: 0 0 0 10px; } }
   .quality__list {
-    margin: 0; }
+    margin: 0;
+    padding: 0;
+    list-style-position: inside;
+    color: white;
+    counter-reset: myCounter; }
   .quality__listItem {
-    position: relative;
-    padding-left: 60px;
-    margin-top: 5px; }
-    .quality__listItem:before {
+    margin-top: 5px;
+    background-image: url("../img/quality__circle.svg");
+    background-position: 9px 28px;
+    background-repeat: no-repeat;
+    padding-left: 25px;
+    list-style: none;
+    /*&:before{
       position: absolute;
       left: -5px;
-      top: -5px; }
-    .quality__listItem:nth-child(1)::before {
-      content: url("../img/quality_1.png"); }
-    .quality__listItem:nth-child(2)::before {
-      content: url("../img/quality_2.png"); }
-    .quality__listItem:nth-child(3)::before {
-      content: url("../img/quality_3.png"); }
+      top: -5px;
+    }
+    &:nth-child(1)::before{
+      content: url("../img/quality_1.png"); 
+    }
+    &:nth-child(2)::before{
+      content: url("../img/quality_2.png"); 
+    }
+    &:nth-child(3)::before{
+      content: url("../img/quality_3.png"); 
+    } */ }
+    .quality__listItem:before {
+      counter-increment: myCounter;
+      content: counter(myCounter);
+      color: white;
+      display: inline-block; }
   .quality__listItemHeadline {
     margin: 0;
+    margin-left: 20px;
+    padding-top: 30px;
     color: black;
     font-family: Roboto-Bold;
-    font-size: 24px; }
+    font-size: 24px;
+    display: inline-block; }
+  .quality__listItemHeadlineSec {
+    margin: 0 0 0 40px;
+    padding-top: 30px;
+    color: black;
+    font-family: Roboto-Bold;
+    font-size: 24px;
+    display: inline-block; }
   .quality__listItemText {
     color: black;
     font-family: Roboto;
     font-size: 18px;
     font-weight: 400;
-    margin: 13px 0 20px; }
+    margin: 13px 0 20px;
+    padding-left: 42px; }
+  .quality__bulList {
+    margin-left: 42px;
+    padding-top: 30px;
+    color: black;
+    font-family: Roboto-Bold; }
+    .quality__bulList li {
+      font-size: 18px;
+      list-style: initial;
+      list-style-position: inside; }
+      .quality__bulList li:before {
+        display: none; }
 
 img {
   max-width: 100%; }
@@ -686,7 +728,9 @@ h2.opac {
   text-align: center;
   text-transform: uppercase;
   font-size: 20px;
-  margin-top: 70px; }
+  margin-top: 70px;
+  font-family: "Roboto-Bold";
+  font-weight: 500; }
 
 .location h2 {
   text-transform: uppercase; }
@@ -701,6 +745,9 @@ h2.opac {
 .planSect {
   background: url("../img/fon3.jpg");
   padding: 0; }
+
+.galery {
+  background: url("../img/fon3a.jpg"); }
 
 .cottegeInfoBox {
   position: relative;
@@ -946,8 +993,9 @@ section ul {
   left: 0px;
   top: 0px;
   width: 1200px;
-  height: 800px;
-  overflow: hidden; }
+  height: 900px;
+  overflow: hidden;
+  text-align: center; }
   .slidesB .tableInfo p, .slidesB .tableInfo span {
     font-size: 16px; }
 
@@ -1314,10 +1362,54 @@ header .menuOpen {
   .imgMap .busesMap {
     position: absolute;
     right: 0;
+    margin-bottom: 0;
     bottom: 150px;
     font-size: 16px;
     max-width: 165px;
     text-align: right; }
+
+.busesMap--greenText {
+  font-size: "Roboto-Bold";
+  color: #607900;
+  display: inline-block;
+  margin-top: 5px; }
+
+.LvivMap {
+  position: absolute;
+  padding-left: 55px;
+  left: 0;
+  height: 55px;
+  width: 150px;
+  bottom: 150px;
+  text-align: left;
+  background: url("../img/LvivMap.svg") no-repeat;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: end;
+  -webkit-justify-content: flex-end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  margin-bottom: 10px; }
+  .LvivMap__headline {
+    font-family: Roboto-Bold;
+    color: #333333;
+    margin: 0;
+    font-size: 20px;
+    font-weight: 500;
+    text-align: left; }
+  .LvivMap__text {
+    font-family: Roboto;
+    color: #333333;
+    font-size: 16px;
+    font-weight: 400;
+    margin: 0; }
 
 #popup-success {
   padding-bottom: 15px; }
@@ -1331,6 +1423,7 @@ header .menuOpen {
 .location {
   position: relative;
   margin-bottom: 50px;
+  height: 650px;
   padding: 0; }
   @media (max-width: 1725px) {
     .location {
@@ -1382,8 +1475,7 @@ header .menuOpen {
     margin-right: -75px; }
   .minMenu .logoCenter {
     max-width: 100px;
-    margin-right: -45px;
-    bottom: -10px; }
+    margin-right: -45px; }
   .formBox {
     width: 700px;
     padding: 50px; }
@@ -1397,7 +1489,7 @@ header .menuOpen {
 @media (max-width: 900px) {
   .logoCenter {
     width: 100px;
-    top: 0px;
+    top: 10px;
     bottom: auto;
     right: auto;
     left: 25px; }
