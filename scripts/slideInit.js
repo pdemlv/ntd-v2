@@ -93,6 +93,7 @@ jQuery(document).ready(function($) {
   var jssor_slider1 = new $JssorSlider$("slider1_container", options);
   var jssor_slider2 = new $JssorSlider$("slider2_container", options2);
   var jssor_slider3 = new $JssorSlider$("slider3_container", options2);
+  var jssor_slider4 = new $JssorSlider$("slider4_container", options2);
 
   //responsive code begin
   //you can remove responsive code if you don't want the slider scales while window resizes
@@ -101,6 +102,7 @@ jQuery(document).ready(function($) {
       if (parentWidth){
         jssor_slider2.$ScaleWidth(Math.min(parentWidth, 960));
         jssor_slider3.$ScaleWidth(Math.min(parentWidth, 960));
+        jssor_slider4.$ScaleWidth(Math.min(parentWidth, 960));
         }
       else
           window.setTimeout(ScaleSlider, 30);

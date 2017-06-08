@@ -11,7 +11,7 @@
       $('.cottegeInfoText').each(function() {
         if(act == $(this).attr("act")){
           pos.top -= ($(this).height() + 5);
-          pos.left -= ($(this).width() + 5);
+          pos.left -= ($(this).width() - 100);
           $(this).css('top', pos.top);
           $(this).css('left', pos.left);
           $(this).fadeIn();
