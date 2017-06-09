@@ -324,9 +324,8 @@ header .menu a.btn {
   text-align: center;
   position: relative;
   &__priceMeter{
-    position: absolute;
-    right: 33%;
-    top: 92px;
+    color: rgb(169, 197, 59);
+    background-color: #353537;
   }
   &__btnMain{
     margin-top: 90px; 
@@ -422,7 +421,7 @@ header .menu a.btn {
 }
 .imgBlc{
   height: 50px;
-  margin-bottom: 35px;
+  margin-bottom: 20px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -433,10 +432,14 @@ header .menu a.btn {
   h3{
     font-family: "Roboto-Bold";
     font-weight: 700;
+    @media(max-width: 400px){
+      margin-bottom: 10px;
+    }
   }
   p{
     font-family: "Roboto-Medium";
     font-weight: 400;
+    word-wrap: break-word;
   }
   &__block1{
     background: url("../img/block2/1.png") center no-repeat;

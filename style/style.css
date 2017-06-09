@@ -305,9 +305,8 @@ header .menu a.btn {
   text-align: center;
   position: relative; }
   .bgSection__priceMeter {
-    position: absolute;
-    right: 33%;
-    top: 92px; }
+    color: #a9c53b;
+    background-color: #353537; }
   .bgSection__btnMain {
     margin-top: 90px;
     background-color: #ff4f1e; }
@@ -433,7 +432,7 @@ header .menu a.btn {
 
 .imgBlc {
   height: 50px;
-  margin-bottom: 35px;
+  margin-bottom: 20px;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -452,9 +451,13 @@ header .menu a.btn {
   .benefits h3 {
     font-family: "Roboto-Bold";
     font-weight: 700; }
+    @media (max-width: 400px) {
+      .benefits h3 {
+        margin-bottom: 10px; } }
   .benefits p {
     font-family: "Roboto-Medium";
-    font-weight: 400; }
+    font-weight: 400;
+    word-wrap: break-word; }
   .benefits__block1 {
     background: url("../img/block2/1.png") center no-repeat; }
     @media (max-width: 700px) {
