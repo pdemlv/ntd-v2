@@ -106,6 +106,9 @@ p {
 .darkBg {
   background-color: rgba(0, 0, 0, 0.5); }
 
+.darkBg-formSect2 {
+  background-color: rgba(45, 45, 45, 0.9); }
+
 h2 {
   color: #333;
   font-size: 32px; }
@@ -473,6 +476,7 @@ header .menu a.btn {
       .benefits__block4 {
         background-size: cover; } }
   .benefits__block5 {
+    color: white;
     background: url("../img/block2/c.png") center no-repeat; }
     @media (max-width: 700px) {
       .benefits__block5 {
@@ -505,22 +509,15 @@ header .menu a.btn {
 
 .benefitSect {
   background: url("../img/fon33.jpg");
-  padding: 220px 0 130px; }
+  padding: 0px 0 130px; }
 
-.titleWhyBox {
-  width: 100%;
-  position: absolute;
-  top: -145px; }
-  .titleWhyBox .titleWhy {
-    background: url("../img/block2/WHY1.png");
-    padding: 100px;
-    background-size: cover;
-    background-position: center;
-    -webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5);
-    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.5); }
+.titleWhyBox .titleWhy {
+  padding: 80px 50px 20px;
+  background-size: cover;
+  background-position: center; }
 
 .titleWhy h2 {
-  color: #fff;
+  color: #000;
   font-size: 35px; }
 
 .container0 {
@@ -1236,11 +1233,12 @@ section ul {
   font-size: 20px; }
 
 .docsBg {
-  background: url("../img/fon6.jpg");
+  background: -webkit-radial-gradient(circle farthest-side at 10%, rgba(45, 45, 45, 0.84) 0%, rgba(45, 45, 45, 0) 60%), -webkit-radial-gradient(circle farthest-side at 40%, rgba(45, 45, 45, 0.84) 0%, rgba(45, 45, 45, 0) 60%), url("../img/fon6.jpg");
+  background: radial-gradient(circle farthest-side at 10%, rgba(45, 45, 45, 0.84) 0%, rgba(45, 45, 45, 0) 60%), radial-gradient(circle farthest-side at 40%, rgba(45, 45, 45, 0.84) 0%, rgba(45, 45, 45, 0) 60%), url("../img/fon6.jpg");
+  background-position: left , 40%, center;
   padding: 100px 20px 60px 100px;
   margin: 20px 0 35px;
-  background-size: cover;
-  background-position: center; }
+  background-size: cover; }
 
 .docItem {
   max-width: 270px; }
@@ -1575,6 +1573,11 @@ header .menuOpen {
     @media (max-width: 1725px) {
       .location2__contact {
         position: static; } }
+  .location2__headline {
+    font-family: "Roboto-Medium";
+    color: #333333;
+    font-size: 32px;
+    text-transform: uppercase; }
 
 @media (max-width: 1200px) {
   #slider1_container {
