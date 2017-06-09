@@ -292,7 +292,10 @@ header .menu a.btn {
   margin-right: -60px; }
 
 .bgSection {
-  background: url("../img/fon1.jpg") no-repeat;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.2)), to(rgba(0, 0, 0, 0.2))), url("../img/fon1.jpg");
+  background: -webkit-linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("../img/fon1.jpg");
+  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url("../img/fon1.jpg");
+  background-repeat: no-repeat;
   background-size: cover;
   padding-top: 145px;
   background-position: center;
@@ -529,7 +532,7 @@ header .menu a.btn {
   padding: 0; }
 
 .formSect2 {
-  background: url("../img/fon5.jpg") center no-repeat;
+  background: url("../img/005.jpg") center no-repeat;
   background-size: cover;
   padding: 0; }
 
@@ -750,21 +753,35 @@ h2.opac {
 
 .darkBg {
   background: url("../img/fon4.jpg");
+  background-size: cover;
   height: 100% !important; }
 
 .planSectTitle h2 {
   text-transform: none; }
 
 .planSect {
-  background: url("../img/fon3.jpg") no-repeat;
+  background: url("../img/fon33.jpg") no-repeat;
+  background-size: cover;
   padding: 0; }
+  .planSect__titleBox {
+    width: 450px; }
+    @media (max-width: 400px) {
+      .planSect__titleBox {
+        margin-bottom: 80px !important; } }
+  .planSect__headline {
+    color: #000 !important;
+    font-size: 32px !important; }
+  .planSect__text {
+    font-size: 20px !important;
+    color: #000 !important; }
+  .planSect .container {
+    max-width: 1300px; }
 
 .galery {
   background: url("../img/fon3a.jpg"); }
 
 .cottegeInfoBox {
-  position: relative;
-  margin-top: 70px; }
+  position: relative; }
   @media (max-width: 900px) {
     .cottegeInfoBox {
       max-width: 450px;
@@ -773,15 +790,30 @@ h2.opac {
     .cottegeInfoBox {
       text-align: center; } }
 
+.compas {
+  position: absolute;
+  top: -100px;
+  right: -200px; }
+  @media (max-width: 900px) {
+    .compas {
+      top: -70px;
+      right: -100px; } }
+  @media (max-width: 500px) {
+    .compas {
+      width: 60px;
+      right: -25px; } }
+
 .cottegeInfo {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%; }
-  .cottegeInfo__imgProdano {
-    -webkit-transform: none !important;
-        -ms-transform: none !important;
-            transform: none !important; }
+  .cottegeInfo > img {
+    position: absolute;
+    display: none; }
+    @media (max-width: 500px) {
+      .cottegeInfo > img {
+        width: 70px; } }
   .cottegeInfo .cAll {
     width: 44px;
     height: 44px;
@@ -815,6 +847,17 @@ h2.opac {
     .c1 {
       top: 76px;
       left: 223px; } }
+  .c1--prodano {
+    background-color: #ff4f1e !important;
+    color: white !important; }
+    .c1--prodano + img {
+      display: block;
+      left: 365px;
+      top: 108px; }
+      @media (max-width: 500px) {
+        .c1--prodano + img {
+          left: 220px;
+          top: 69px; } }
 
 .c2 {
   top: 146px;
@@ -823,6 +866,17 @@ h2.opac {
     .c2 {
       top: 79px;
       left: 123px; } }
+  .c2--prodano {
+    background-color: #ff4f1e !important;
+    color: white !important; }
+    .c2--prodano + img {
+      display: block;
+      left: -115px;
+      top: 152px; }
+      @media (max-width: 500px) {
+        .c2--prodano + img {
+          left: -33px;
+          top: 91px; } }
 
 .c3 {
   top: 163px;
@@ -847,6 +901,17 @@ h2.opac {
     .c5 {
       top: 131px;
       left: 219px; } }
+  .c5--prodano {
+    background-color: #ff4f1e !important;
+    color: white !important; }
+    .c5--prodano + img {
+      display: block;
+      left: 365px;
+      top: 218px; }
+      @media (max-width: 500px) {
+        .c5--prodano + img {
+          left: 220px;
+          top: 134px; } }
 
 .c6 {
   top: 268px;
@@ -974,6 +1039,9 @@ h2.opac {
   max-width: 600px;
   position: relative;
   z-index: 10; }
+  .aboutProjectInsider p {
+    font-size: 16px;
+    font-weight: 400; }
 
 section ul {
   padding-left: 0; }
@@ -993,7 +1061,7 @@ section ul {
 
 .greenShadow {
   position: absolute;
-  background: rgba(99, 123, 9, 0.5);
+  background-color: rgba(169, 197, 59, 0.3);
   top: 50px;
   left: -50px; }
   @media (max-width: 1200px) {

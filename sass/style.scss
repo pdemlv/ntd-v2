@@ -311,7 +311,8 @@ header .menu a.btn {
 }
 
 .bgSection {
-  background: url('../img/fon1.jpg') no-repeat;
+  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.2)), url('../img/fon1.jpg');
+  background-repeat: no-repeat;
   background-size: cover;
   padding-top: 145px;
   background-position: center;
@@ -532,7 +533,7 @@ header .menu a.btn {
 }
 
 .formSect2 {
-  background: url('../img/fon5.jpg') center no-repeat;
+  background: url('../img/005.jpg') center no-repeat;
   background-size: cover; 
   padding: 0;
 }
@@ -781,6 +782,7 @@ h2.opac {
 
 .darkBg {
   background: url('../img/fon4.jpg');
+  background-size: cover;
   height: 100% !important;
 }
 
@@ -789,9 +791,26 @@ h2.opac {
 }
 
 .planSect {
-  background: url('../img/fon3.jpg') no-repeat;
-
+  background: url('../img/fon33.jpg') no-repeat;
+  background-size: cover;
   padding: 0;
+  &__titleBox{
+    width: 450px;
+    @media(max-width: 400px){
+      margin-bottom: 80px !important;
+    }
+  }
+  &__headline{
+    color: #000 !important;
+    font-size: 32px !important;
+  }
+  &__text{
+    font-size: 20px !important; 
+    color: #000 !important;
+  }
+  .container{
+    max-width: 1300px;
+  }
 }
 
 .galery{
@@ -800,7 +819,6 @@ h2.opac {
 
 .cottegeInfoBox {
   position: relative;
-  margin-top: 70px;
   @media(max-width: 900px){
     max-width: 450px;
     width: 100%;
@@ -809,14 +827,31 @@ h2.opac {
     text-align: center;
   }
 }
+.compas{
+  position: absolute;
+  top: -100px;
+  right: -200px;
+  @media(max-width: 900px){
+    top: -70px;
+    right: -100px;
+  }
+  @media(max-width: 500px){
+    width: 60px;
+    right: -25px;
+  }
+}
 
 .cottegeInfo {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
-  &__imgProdano{
-    transform: none !important;
+  &>img{
+    position: absolute;
+    display: none;
+    @media(max-width: 500px){
+      width: 70px;
+    }
   }
   .cAll {
     width: 44px;
@@ -852,6 +887,19 @@ h2.opac {
     top: 76px;
     left: 223px;
   }
+  &--prodano{
+    background-color:  #ff4f1e !important;
+    color: white !important;
+    &+img{
+      display: block;
+      left: 365px;
+      top: 108px;
+      @media(max-width: 500px){
+        left: 220px;
+        top: 69px;  
+      }
+    }
+  }
 }
 
 .c2 {
@@ -860,6 +908,19 @@ h2.opac {
   @media(max-width: 500px){
     top: 79px;
     left: 123px;
+  }
+  &--prodano{
+    background-color:  #ff4f1e !important;
+    color: white !important;
+    &+img{
+    display: block;
+    left: -115px;
+    top: 152px;
+    @media(max-width: 500px){
+      left: -33px;
+      top: 91px;
+      }
+    }
   }
 }
 
@@ -887,6 +948,19 @@ h2.opac {
   @media(max-width: 500px){
     top: 131px;
     left: 219px;
+  }
+  &--prodano{
+    background-color:  #ff4f1e !important;
+    color: white !important;
+    &+img{
+      display: block;
+      left: 365px;
+      top: 218px;
+      @media(max-width: 500px){
+        left: 220px;
+        top: 134px;  
+      }
+    }
   }
 }
 
@@ -1036,6 +1110,10 @@ h2.opac {
   max-width: 600px;
   position: relative;
   z-index: 10;
+  p{
+    font-size: 16px;
+    font-weight: 400;
+  }
 }
 
 section ul {
@@ -1061,7 +1139,7 @@ section ul {
 
 .greenShadow {
   position: absolute;
-  background: rgba(99, 123, 9, 0.5);
+  background-color:  rgba(169, 197, 59, 0.3);
   top: 50px;
   left: -50px;
   @media(max-width: 1200px){
@@ -1721,6 +1799,7 @@ header .menuOpen {
   }
   .bgAbsPos .darkBg {
     background: url(../img/fon4.jpg);
+
     width: 100%;
     max-height: 250px;
     .opac {
